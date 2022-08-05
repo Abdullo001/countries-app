@@ -62,6 +62,7 @@ const Country = () => {
                     <strong>Capital: <span>{e.capital}</span></strong>
                   </li>
 
+
                   <li key={"2"} className="info__item">
                     <strong>Top level domain: <span>{e.tld}</span></strong>
                     <strong>Currencies: <span>{currency}</span></strong>
