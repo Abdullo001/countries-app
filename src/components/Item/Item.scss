@@ -1,14 +1,16 @@
-li{
+.item{
+  display: inline-block;
   width: 265px;
   margin-right: 74px;
   margin-bottom: 75px;
   background-color: #FFFFFF;
   box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
   border-radius: 5px;
+  text-decoration: none;
   
 }
 
-li:nth-child(4n){
+.item:nth-child(4n){
   margin-right: 0;
 }
 
