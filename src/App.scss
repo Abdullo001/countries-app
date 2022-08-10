@@ -1,10 +1,9 @@
-.appBody{
+.appBody {
   min-height: 100vh;
-  background-color: #F2F2F2
-
+  background-color: #f2f2f2;
 }
 
-.list{
+.list {
   margin: 0;
   padding: 0;
   display: flex;
@@ -14,33 +13,51 @@
   list-style-type: none;
 }
 
-.searchBox{
+.searchBox {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  padding-top: 48px;
 }
 
-select{
+select {
   display: inline-block;
   width: 200px;
   margin-bottom: 48px;
-  padding: 18px 0 18px 24px ;
+  padding: 18px 0 18px 24px;
   border: 0;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
   border-radius: 5px;
 }
 
-
-.input{
+.input {
   display: inline-block;
   width: 480px;
   margin-bottom: 48px;
   padding: 18px 0 18px 74px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border: 0;
   box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
   border-radius: 5px;
 }
 
+.dark {
+  .main {
+    background-color: #202c36;
+  }
 
+  .input {
+    background-color: #2b3844;
+    color: #ffffff;
+
+    &[placeholder] {
+      color: #ffffff;
+    }
+  }
+
+  select {
+    background-color: #2b3844;
+    color: #ffffff;
+  }
+}

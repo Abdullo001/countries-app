@@ -1,50 +1,53 @@
-.header{
-  margin-bottom: 48px;
+header {
   padding: 24px 0;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
+  color: #111517;
+
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
 }
 
-.container{
+.container {
   width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-.header__inner{
+.header__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.header__text{
+.header__text {
   font-weight: 800;
   font-size: 24px;
-  line-height: 33px;  
-  color: #111517;
+  line-height: 33px;
 }
 
-.header__inner>button{
+.header__inner > button {
   display: flex;
   align-items: center;
   border: 0;
 
-  background-color:transparent;
+  background-color: transparent;
 }
 
-.moonImg{
+.moonImg {
   margin-right: 8px;
 }
 
-.btnText{
-
-  
-
-
+.btnText {
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
-  color: #111517;
+}
 
-  
+.dark {
+  color: #ffffff;
+  background-color: #2b3844;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
+}
+
+.dark .btnText {
+  color: #ffffff;
 }

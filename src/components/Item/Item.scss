@@ -1,5 +1,5 @@
 .item{
-  display: inline-block;
+  
   width: 265px;
   margin-right: 74px;
   margin-bottom: 75px;
@@ -14,11 +14,20 @@
   margin-right: 0;
 }
 
+.item-main{
+  height: 100%;
+  border-radius: 5px;
+
+}
+
 .item__box{
   padding: 0 24px 46px 24px;
+  border-radius: 5px;
+
 }
 
 .item__img{
+  vertical-align: middle;
   margin-bottom: 24px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -51,4 +60,17 @@
 
 .item__capital{
   margin: 0;
+}
+
+
+.dark{
+  .item-main{
+    background-color: #2B3844;;
+  }
+
+  .item__title,.item__region,.item__capital,.item__population{
+    color: #FFFFFF;
+  }
+
+
 }
