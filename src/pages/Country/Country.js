@@ -33,13 +33,14 @@ const Country = ({ theme }) => {
     }
   });
 
-
-  let borders=[]
-  country.forEach((e)=>{
-    borders=[...e.borders];
-  })
-
-  console.log(borders);
+  let borders = [];
+  {
+    country.forEach((e) => {
+      if(e.borders?.length){
+        borders = [...e.borders];
+      }
+    });
+  }
 
   return (
     <div className={theme}>
@@ -71,7 +72,11 @@ const Country = ({ theme }) => {
               {country.map((e) => {
                 return (
                   <div key={e.name.common} className="countryBox">
-                    <img src={e.flags.png} alt={e.name.common} className={"img-flag"} />
+                    <img
+                      src={e.flags.png}
+                      alt={e.name.common}
+                      className={"img-flag"}
+                    />
 
                     <div className="info">
                       <h3 className="info__title">{e.name.common}</h3>
@@ -109,18 +114,16 @@ const Country = ({ theme }) => {
                         </li>
                       </ul>
 
-                      {e.borders.length ?
-                       <div className="borders mt-5">
-                        <h4 className="borders-title " >
-                          Borders:
-                        </h4>
-                          {borders.map((border)=>{
-                            return(
-                            <span className="border-country">{border}</span>
-
-                            )
+                      {e.borders?.length ? (
+                        <div className="borders mt-5">
+                          <h4 className="borders-title ">Borders:</h4>
+                          {borders.map((border) => {
+                            return (
+                              <span className="border-country">{border}</span>
+                            );
                           })}
-                       </div> : null}
+                        </div>
+                      ) : null}
                     </div>
                   </div>
                 );

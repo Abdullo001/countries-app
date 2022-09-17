@@ -85,16 +85,15 @@ function App() {
                       <option value="europe">Europe</option>
                       <option value="oceania">Oceania</option>
                     </select>
-                    {/* <span class="focus"></span> */}
                   </div>
 
                   <ul className="list ">
                     {countries.length ? (
                       countries.map((e) => {
                         return (
-                          <li>
+                          
+                          <li key={e.id} >
                             <Item
-                              key={e.id}
                               id={e.id}
                               img={e.flags.png}
                               name={e.name.official}
