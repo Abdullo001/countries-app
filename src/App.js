@@ -3,6 +3,7 @@ import Header from "../src/components/Header/Header";
 import { Route, Routes } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Country from "../src/pages/Country/Country";
+import Loader from "./assets/images/loader.svg";
 
 import Item from "../src/components/Item/Item";
 import { useEffect, useState } from "react";
@@ -12,7 +13,6 @@ function App() {
   const [value, setValue] = useState("");
   const [region, setRegion] = useState("");
   const [theme, setTheme] = useState("");
-
 
   useEffect(() => {
     if (value.length) {
@@ -72,26 +72,27 @@ function App() {
                     />
 
                     <select
-                      defaultValue={"0"}
+                      className="select"
+                      defaultValue={""}
                       onChange={(evt) => {
                         setRegion(evt.target.value);
                       }}
                     >
-                      <option disabled value={" "}>
-                        Filter by Region
-                      </option>
+                      <option value={""}>Filter by Region</option>
                       <option value="africa">Africa</option>
                       <option value="america">America</option>
                       <option value="asia">Asia</option>
                       <option value="europe">Europe</option>
                       <option value="oceania">Oceania</option>
                     </select>
+                    {/* <span class="focus"></span> */}
                   </div>
 
                   <ul className="list ">
-                    {countries.length
-                      ? countries.map((e) => {
-                          return (
+                    {countries.length ? (
+                      countries.map((e) => {
+                        return (
+                          <li>
                             <Item
                               key={e.id}
                               id={e.id}
@@ -103,9 +104,14 @@ function App() {
                               population={e.population}
                               theme={theme}
                             />
-                          );
-                        })
-                      : "Loading..."}
+                          </li>
+                        );
+                      })
+                    ) : (
+                      <div className="loader-box">
+                        <img src={Loader} alt="" />
+                      </div>
+                    )}
                   </ul>
                 </div>
               </div>

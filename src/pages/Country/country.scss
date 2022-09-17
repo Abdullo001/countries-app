@@ -24,12 +24,15 @@
 }
 
 .countryBox > img {
-  width: 560px;
-  height: 400px;
-  margin-right: 120px;
   background-color: #808080;
   box-shadow: 0px 0px 14px 4px rgba(0, 0, 0, 0.0294384);
   border-radius: 10px;
+}
+
+.img-flag {
+  width: 560px;
+  height: 401px;
+  margin-right: 120px;
 }
 
 .info__title {
@@ -74,14 +77,53 @@
   .return-btn {
     background-color: #2b3844;
     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.293139);
-    color: #FFFFFF;
+    color: #ffffff;
   }
 
-  svg{
+  svg {
     fill: #ffffff;
   }
 
-  .info__title, .info__item>strong{
-    color: #FFFFFF;
+  .info__title,
+  .info__item > strong {
+    color: #ffffff;
+  }
+}
+
+.loader-box {
+  display: flex;
+  justify-content: center;
+}
+
+.border-country {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 2px solid #808080;
+  border-radius: 8px;
+}
+
+.border-country + .border-country {
+  margin-left: 20px;
+}
+
+.borders-title {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+@media only screen and (max-width: 376px) {
+  .countryBox {
+    flex-direction: column;
+  }
+
+  .img-flag {
+    width: 320px;
+    height: 229px;
+    margin-right: 0;
+    margin-bottom: 44px;
+  }
+
+  .info__list {
+    flex-direction: column;
   }
 }
