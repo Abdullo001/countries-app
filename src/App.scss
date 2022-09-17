@@ -81,6 +81,11 @@ select {
   }
 }
 
+.loader-box {
+  display: flex;
+  justify-content: center;
+}
+
 @media only screen and (max-width: 376px) {
   .searchBox {
     flex-direction: column;
